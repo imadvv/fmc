@@ -1,0 +1,74 @@
+:root {
+  --clr-main: #01010d;
+  --clr-text: #0f55f8;
+}
+
+*,
+*::after,
+*::before {
+  padding: unset;
+  margin: unset;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100dvw;
+  background-color: var(--clr-main);
+  color: var(--clr-text);
+}
+
+header {
+  max-width: 80%;
+  margin-inline: auto;
+  padding-block: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  display: block;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  text-decoration: none;
+  text-transform: capitalize;
+  background-color: var(--clr-text);
+  color: var(--clr-main);
+  border-radius: 1px 5px 9px 19px;
+  transition: 200ms ease-in-out;
+}
+
+header a:hover {
+  scale: 0.9;
+}
+
+main {
+  outline: 2px solid #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr 2fr;
+  align-items: center;
+}
+
+main section {
+  padding: 3rem;
+  color: #f1f1ff;
+}
+
+main section h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 4px;
+}
+
+.challenges-links a {
+  display: block;
+  padding-block: 1rem;
+  padding-inline: 2rem;
+  margin-block: 1rem;
+  background-color: rgba(200, 100, 200, 0.4);
+  color: #fff;
+  opacity: 0.4;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
