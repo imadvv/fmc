@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src:
+    local("Poppins"),
+    url("../assets/fonts/Poppins-Regular.ttf") format("TrueType");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 900;
+  src: local("Poppins") url("../assets/fonts/Poppins-Bold.ttf")
+    format("TrueType");
+}
+
+:root {
+  --Purple-500: hsl(259, 100%, 65%);
+  --Red-400: hsl(0, 100%, 67%);
+  --White: hsl(0, 100%, 100%);
+  --Grey-100: hsl(0, 0%, 94%);
+  --Grey-200: hsl(0, 0%, 86%);
+  --Grey-500: hsl(0, 1%, 44%);
+  --Black: hsl(0, 0%, 0%);
+
+  --ff-body: "Poppins";
+}
+
+*,
+*::before,
+*::after {
+  margin: unset;
+  padding: unset;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-body);
+  display: grid;
+  place-content: center;
+  min-block-size: 100svh;
+  background-color: var(--Grey-100);
+}
+
+main {
+  background-color: var(--White);
+  padding: 2rem 2.5rem;
+  border-radius: 3rem;
+  box-shadow: 1px 5px 5px var(--Grey-200);
+}
+
+main form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 2rem;
+  gap: 2rem;
+  position: relative;
+  border-bottom: 1px solid var(--Grey-200);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.form-group label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--Grey-500);
+}
+
+.form-group input {
+  padding: 1rem;
+  font-size: 1.35rem;
+  border: 1px solid var(--Grey-200);
+  border-radius: 1rem;
+}
+
+.form-group input:user-invalid {
+  border: 1px solid var(--Red-400);
+}
+
+main button {
+  position: absolute;
+  background-color: var(--Purple-500);
+  right: 0;
+  bottom: -2rem;
+  border: 0;
+  border-radius: 50%;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+.results {
+  text-align: left;
+  display: grid;
+  gap: 2rem;
+  margin-block-start: 2rem;
+  font-weight: 900;
+  font-size: 6rem;
+}
+
+.results p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.results > p > span {
+  color: var(--Purple-500);
+}
+
+.err {
+  opacity: 0;
+  visibility: hidden;
+  color: var(--Red-400);
+}
