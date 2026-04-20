@@ -1,95 +1,96 @@
 @font-face {
-  font-family: "PT_Mono";
-  src:
-    local("PT_Mono"),
-    url("./Anta/Anta-Regular.ttf") format("TrueType");
+    font-family: "PT_Mono";
+    src:
+        local("PT_Mono"),
+        url("./Anta/Anta-Regular.ttf") format("TrueType");
 }
 
 :root {
-  --clr-main: rgb(18, 0, 25);
-  --clr-secondary: rgb( 0,171, 255);
-  --clr-white: rgb(255, 255, 255);
+    --clr-main: rgb(18, 0, 25);
+    --clr-secondary: rgb(0, 171, 255);
+    --clr-white: rgb(255, 255, 255);
 }
 
 *,
 *::after,
 *::before {
-  padding: unset;
-  margin: unset;
-  box-sizing: border-box;
+    padding: unset;
+    margin: unset;
+    box-sizing: border-box;
 }
 
 body {
-  min-block-size: 100svh;
-  font-family: "PT_Mono";
-  background-color: var(--clr-main);
+    min-block-size: 100svh;
+    font-family: "PT_Mono";
+    background-color: var(--clr-main);
 }
 
 header {
-  max-width: 80rem;
-  margin-inline: auto;
-  padding-block: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.4);
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-block: 2rem;
+    padding-inline: 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 header a {
-  display: block;
-  padding-block: 0.5rem;
-  padding-inline: 1.5rem;
-  text-decoration: none;
-  text-transform: capitalize;
-  background-color: var(--clr-secondary);
-  color: var(--clr-main);
-  border-radius: 1px 5px 9px 19px;
-  transition: 200ms ease-in-out;
-  font-size: 1.1rem;
-  letter-spacing: 3px;
-  font-weight: 600;
+    display: block;
+    padding-block: 0.5rem;
+    padding-inline: 1.5rem;
+    text-decoration: none;
+    text-transform: capitalize;
+    background-color: var(--clr-secondary);
+    color: var(--clr-main);
+    border-radius: 1px 5px 9px 19px;
+    transition: 200ms ease-in-out;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    font-weight: 600;
 }
 
 header a:hover {
-  background-color: var(--clr-white);
+    background-color: var(--clr-white);
 }
 
 main {
-  display: grid;
-  gap:2rem;
-  align-items: center;
-  max-width: 100rem;
-  margin-inline: auto;
-  margin-block: 3rem;
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    max-width: 100rem;
+    margin-inline: auto;
+    margin-block: 3rem;
 }
 
 main section {
-  padding-block: 0.5rem;
-  padding-inline:1rem;
-  color: #f1f1ff;
+    padding-block: 0.5rem;
+    padding-inline: 1rem;
+    color: #f1f1ff;
 }
 
 main section h2 {
-  text-transform: uppercase;
-  font-size: 2rem;
-  letter-spacing: 4px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 4px;
 }
 
 .solutions-links a {
-  display: block;
-  padding-block: 1rem;
-  padding-inline: 2rem;
-  margin-block: 1rem;
-  border-radius: 1rem 1.5rem 1.8rem 2rem; 
-  color: #fff;
-  opacity: 0.4;
-  text-decoration: none;
-  font-size: 1.5rem;
-  background-color: rgb(53,18,101);
-  transition: 200ms ease;
+    display: block;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    margin-block: 1rem;
+    border-radius: 1rem 1.5rem 1.8rem 2rem;
+    color: #fff;
+    opacity: 0.4;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: rgb(53, 18, 101);
+    transition: 200ms ease;
 }
 
 .solutions-links a:hover {
-  background-color :var(--clr-secondary);
-  color: var(--clr-main);
+    background-color: var(--clr-secondary);
+    color: var(--clr-main);
 }
