@@ -1,0 +1,96 @@
+:root {
+    --Purple-700: hsl(257, 40%, 49%);
+    --Magenta-400: hsl(300, 69%, 71%);
+    --white: hsl(255 100% 100%);
+}
+
+*,
+*::before,
+*::after {
+    margin: unset;
+    padding: unset;
+    box-sizing: border-box;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+    line-height: 0;
+}
+
+body {
+    font-size: 1.25rem;
+    min-height: 100svh;
+    background-image: url(../images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--Purple-700);
+    color: var(--white);
+    /*display: grid;*/
+    /*grid-template-rows: max-content 1fr;*/
+}
+
+.wrapper {
+    max-width: 90%;
+    margin-inline: auto;
+}
+
+header {
+    padding-block: 2rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-block: 3rem;
+    padding-block: 2rem;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+}
+
+.content > h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.content > p {
+    opacity: 0.8;
+    max-width: 50ch;
+}
+
+.content > button {
+    padding: 1rem 2.5rem;
+    font: inherit;
+    background-color: var(--white);
+    border-radius: 5rem;
+    cursor: pointer;
+    color: var(--Purple-700);
+    border: unset;
+}
+.content > button:hover,
+.content > button:focus-visible {
+    border: unset;
+    background-color: var(--Magenta-400);
+    color: var(--white);
+    box-shadow: 1px 3px 2px var(--Purple-700);
+}
+.social-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    grid-column: 2/3;
+    margin-inline-start: auto;
+}
+
+.social-link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1rem;
+    width: 4rem;
+}
