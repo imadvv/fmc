@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "Poppins";
+    src:
+        local("Poppins"),
+        url("../font/Poppins-Regular.ttf") format("TrueTye");
+}
+
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Grey-500: hsl(234, 12%, 34%);
+    --Grey-400: hsl(212, 6%, 44%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+    margin: unset;
+    padding: unset;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--White);
+    min-height: 100svh;
+    font-family: "Poppins";
+    font-size: 1.1rem;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    place-items: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+header h1 span {
+    font-weight: 700;
+    display: block;
+}
+
+header p {
+    opacity: 0.7;
+    max-width: 60ch;
+    text-align: center;
+    line-height: 1.5;
+}
+
+main {
+    max-width: 90%;
+    margin-block: 3rem;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+section {
+    box-shadow: 2px 2px 4px var(--Grey-400);
+    padding: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+section > p {
+    max-width: 33ch;
+    line-height: 1.5;
+    opacity: 0.65;
+}
+section > img {
+    margin-inline-start: auto;
+}
+
+section:nth-child(1) {
+    grid-row: span 2;
+    align-self: center;
+    border-top: 5px solid var(--Cyan);
+}
+section:nth-child(2) {
+    border-top: 5px solid var(--Red);
+}
+section:nth-child(3) {
+    align-self: center;
+    grid-row: span 2;
+    border-top: 5px solid var(--Blue);
+}
+section:nth-child(4) {
+    border-top: 5px solid var(--Orange);
+    grid-column: 2/3;
+}
+
+@media (width < 900px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        grid-row: span 1;
+    }
+    section:nth-child(4) {
+        grid-column: span 1;
+    }
+}
