@@ -1,216 +1,221 @@
 @font-face {
-  font-family: "Hanken Grotesk";
-  src:
-    local("Hanken Grotesk"),
-    url("../assets/fonts/static/HankenGrotesk-Medium.ttf") format("Truetype");
-  font-weight: 600;
+    font-family: "Hanken Grotesk";
+    src:
+        local("Hanken Grotesk"),
+        url("../assets/fonts/static/HankenGrotesk-Medium.ttf")
+            format("Truetype");
+    font-weight: 600;
 }
 
 @font-face {
-  font-family: "Hanken Grotesk";
-  src:
-    local("Hanken Grotesk"),
-    url("../assets/fonts/static/HankenGrotesk-Bold.ttf") format("Truetype");
-  font-weight: 700;
+    font-family: "Hanken Grotesk";
+    src:
+        local("Hanken Grotesk"),
+        url("../assets/fonts/static/HankenGrotesk-Bold.ttf") format("Truetype");
+    font-weight: 700;
 }
 
 @font-face {
-  font-family: "Hanken Grotesk";
-  src:
-    local("Hanken Grotesk"),
-    url("../assets/fonts/static/HankenGrotesk-ExtraBold.ttf") format("Truetype");
-  font-weight: 900;
+    font-family: "Hanken Grotesk";
+    src:
+        local("Hanken Grotesk"),
+        url("../assets/fonts/static/HankenGrotesk-ExtraBold.ttf")
+            format("Truetype");
+    font-weight: 900;
 }
 
 :root {
-  --Light-red: 0, 100%, 67%;
-  --Orangey-yellow: 39, 100%, 56%;
-  --Green-teal: 166, 100%, 37%;
-  --Cobalt-blue: 234, 85%, 45%;
+    --Light-red: 0, 100%, 67%;
+    --Orangey-yellow: 39, 100%, 56%;
+    --Green-teal: 166, 100%, 37%;
+    --Cobalt-blue: 234, 85%, 45%;
 
-  /*## Gradients*/
+    /*## Gradients*/
 
-  --Light-slate-blue-background: hsl(252, 100%, 67%);
-  --Light-royal-blue-background: hsl(241, 81%, 54%);
-  --Violet-blue-circle: hsla(256, 72%, 46%, 1);
-  --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+    --Light-slate-blue-background: hsl(252, 100%, 67%);
+    --Light-royal-blue-background: hsl(241, 81%, 54%);
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
 
-  /*### Neutral*/
+    /*### Neutral*/
 
-  --White: hsl(0, 0%, 100%);
-  --Pale-blue: hsl(221, 100%, 96%);
-  --Light-lavender: hsl(241, 100%, 89%);
-  --Dark-gray-blue: hsl(224, 30%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
 }
 
 *,
 *::before,
 *::after {
-  margin: unset;
-  padding: unset;
-  box-sizing: border-box;
+    margin: unset;
+    padding: unset;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Hanken Grotesk";
-  font-weight: 600;
-  font-size: 1.15rem;
-  display: grid;
-  place-content: center;
-  min-block-size: 100svh;
-  background-color: var(--Pale-blue);
+    font-family: "Hanken Grotesk";
+    font-weight: 600;
+    font-size: 1.15rem;
+    display: grid;
+    place-content: center;
+    min-block-size: 100svh;
+    background-color: var(--Pale-blue);
+    background-image: linear-gradient(var(--Pale-blue), var(--Light-lavender));
+    overflow: hidden;
 }
 
 main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  background-color: var(--White);
-  box-shadow: 1rem 1rem 0.75rem hsla(var(--Cobalt-blue),0.1);
-  border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--White);
+    box-shadow: 1rem 1rem 0.75rem hsla(var(--Cobalt-blue), 0.1);
+    border-radius: 2rem;
 }
 
 #result {
-  background-image: radial-gradient(
-  circle at 60%,
-    var(--Light-slate-blue-background) 10%,
-    var(--Light-royal-blue-background)80%
-  );
-  color: var(--White);
-  border-radius: 2rem;
-  text-align: center;
-  padding: 1.5rem 2rem;
-  display: grid;
-  gap: 1.15rem;
+    background-image: radial-gradient(
+        circle at 60%,
+        var(--Light-slate-blue-background) 10%,
+        var(--Light-royal-blue-background) 80%
+    );
+    color: var(--White);
+    border-radius: 2rem;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    display: grid;
+    gap: 1.15rem;
 }
 
 #result > p {
-  max-width: 25ch;
-  opacity: 0.6;
+    max-width: 25ch;
+    opacity: 0.6;
 }
 
 .result {
-  background-image: linear-gradient(
-    var(--Violet-blue-circle),
-    var(--Persian-blue-circle)
-  );
-  border-radius: 100%;
-  width: 200px;
-  margin-inline: auto;
-  aspect-ratio: 1/1;
-  display: grid;
-  place-content: center;
+    background-image: linear-gradient(
+        var(--Violet-blue-circle),
+        var(--Persian-blue-circle)
+    );
+    border-radius: 100%;
+    width: 200px;
+    margin-inline: auto;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-content: center;
 }
 
 .result p {
-  font-size: 4rem;
-  font-weight: 800;
+    font-size: 4rem;
+    font-weight: 800;
 }
 .result span {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 
 #summary {
-  background-color: var(--White);
-  padding: 1.5rem 2rem;
-  display: grid;
-  gap: 1.15rem;
-  border-radius: 0 2rem 2rem 0;
+    background-color: var(--White);
+    padding: 1.5rem 2rem;
+    display: grid;
+    gap: 1.15rem;
+    border-radius: 0 2rem 2rem 0;
 }
 
 #summary h2 {
-  color: var(--Dark-gray-blue);
+    color: var(--Dark-gray-blue);
 }
 .summary {
-  list-style: none;
-  display: grid;
-  gap: 1rem;
+    list-style: none;
+    display: grid;
+    gap: 1rem;
 }
 
 .summary li {
-  background-color: var(--Cobalt-blue);
-  padding: 0.8rem 1.5rem;
-  text-transform: capitalize;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  border-radius: 1rem;
-  font-weight: 800;
-  position: relative;
+    background-color: var(--Cobalt-blue);
+    padding: 0.9rem 1.7rem;
+    text-transform: capitalize;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    /*justify-content: space-between;*/
+    gap: 1rem;
+    border-radius: 1rem;
+    font-weight: 800;
+    position: relative;
 }
 
 .summary li span {
-  color: var(--Dark-gray-blue);
+    color: var(--Dark-gray-blue);
+    margin-inline-start: auto;
 }
 
 .summary li:nth-child(1) {
-  background-color: hsla(var(--Light-red), 0.2);
-  color: hsl(var(--Light-red));
+    background-color: hsla(var(--Light-red), 0.2);
+    color: hsl(var(--Light-red));
 }
 .summary li:nth-child(1)::before {
-  content: url("../assets/images/icon-reaction.svg");
-  display: flex;
-
+    content: url("../assets/images/icon-reaction.svg");
+    display: flex;
 }
 .summary li:nth-child(2) {
-  background-color: hsla(var(--Orangey-yellow), 0.2);
-  color: hsl(var(--Orangey-yellow));
+    background-color: hsla(var(--Orangey-yellow), 0.2);
+    color: hsl(var(--Orangey-yellow));
 }
 
 .summary li:nth-child(2)::before {
-  content: url("../assets/images/icon-memory.svg");
-  display: flex;
+    content: url("../assets/images/icon-memory.svg");
+    display: flex;
 }
 .summary li:nth-child(3) {
-  background-color: hsla(var(--Green-teal), 0.2);
-  color: hsl(var(--Green-teal));
+    background-color: hsla(var(--Green-teal), 0.2);
+    color: hsl(var(--Green-teal));
 }
 .summary li:nth-child(3)::before {
-
-  content: url("../assets/images/icon-verbal.svg");
-  display: flex;
+    content: url("../assets/images/icon-verbal.svg");
+    display: flex;
 }
-
 
 .summary li:nth-child(4) {
-  background-color: hsla(var(--Cobalt-blue), 0.2);
-  color: hsl(var(--Cobalt-blue));
+    background-color: hsla(var(--Cobalt-blue), 0.2);
+    color: hsl(var(--Cobalt-blue));
 }
 .summary li:nth-child(4)::before {
-  content: url("../assets/images/icon-visual.svg");
-  display: flex;
+    content: url("../assets/images/icon-visual.svg");
+    display: flex;
 }
 #summary button {
-  border: 0;
-  background-color: var(--Dark-gray-blue);
-  cursor: pointer;
-  color: var(--White);
-  border-radius: 3rem;
-  font-size: inherit;
-  padding: 0.5rem 1.22rem;
-  transition: 250ms ease-in-out;
+    border: 0;
+    background-color: var(--Dark-gray-blue);
+    cursor: pointer;
+    color: var(--White);
+    border-radius: 3rem;
+    font-size: inherit;
+    padding: 0.5rem 1.22rem;
+    transition: 250ms ease-in-out;
 }
 
 #summary button:is(:hover, :focus, :focus-visible) {
-  background-color: hsl(241, 81%, 54%);
+    background-color: hsl(241, 81%, 54%);
 }
 
-@media screen and (width < 600px) {
-  main {
-    grid-template-columns: 1fr;
-    min-width: 100svw;
-    min-height: 100svh;
+@media screen and (width < 680px) {
+    main {
+        grid-template-columns: 1fr;
+        min-width: 100svw;
+        min-height: 100svh;
+    }
+    #result {
+        border-radius: 0 0 2rem 2rem;
+    }
+    #summary {
+        border-radius: 0;
+    }
 
-  }
-  #result {
-    border-radius: 0 0 2rem  2rem ;
-  }
-  #summary {
-    border-radius: 0;
-  }
+    #summary button {
+        padding: 1rem;
+    }
+}
 
-  #summary button {
-    padding: 1rem;
-  }
+.dim {
+    opacity: 0.7;
 }
