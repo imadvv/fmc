@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "LeagueSpartan";
+    src: url("../fonts/League_Spartan/static/LeagueSpartan-Regular.ttf")
+        format("TrueType");
+}
+
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: "LeagueSpartan";
+    font-size: 1.1rem;
+    background-color: var(--Light-Grayish-Magenta);
+    min-height: 100svh;
+    position: relative;
+    display: grid;
+    place-content: center;
+}
+
+body::before {
+    content: url("../images/bg-pattern-top-desktop.svg");
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40svh;
+    width: 100%;
+}
+body::after {
+    content: url("../images/bg-pattern-bottom-desktop.svg");
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 40svh;
+    width: 100%;
+}
